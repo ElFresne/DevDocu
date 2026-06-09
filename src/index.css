@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent-indigo: #6366f1;
+  --accent-green: #22c55e;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--accent-indigo);
+  stroke-width: 3;
+}
+
+.react-flow__controls-button {
+  background: var(--bg-tertiary);
+  border: 1px solid #334155;
+  color: var(--text-primary);
+  fill: var(--text-primary);
+}
+
+.react-flow__controls-button:hover {
+  background: #334155;
+}
+
+.react-flow__minimap {
+  background: var(--bg-secondary);
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.react-flow__background {
+  background: var(--bg-primary);
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.node-glow {
+  filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.4));
+}
+
+.edge-gradient {
+  stroke-linecap: round;
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: #334155; }
+  50% { border-color: var(--accent-indigo); }
+}
+
+.analyzing {
+  animation: pulse-border 1.5s ease-in-out infinite;
+}
